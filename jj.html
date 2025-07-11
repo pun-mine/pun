@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>กำลังดำเนินการ...</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans Thai', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(to right, #6a11cb, #2575fc); /* พื้นหลังเดียวกับหน้าแรกเพื่อความต่อเนื่อง */
+            color: #fff; /* สีข้อความขาวเพื่อตัดกับพื้นหลัง */
+            overflow: hidden; /* ซ่อน scrollbar ถ้ามี */
+        }
+
+        .loading-container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.1); /* พื้นหลังโปร่งแสงเล็กน้อย */
+            padding: 50px 70px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-out; /* แอนิเมชันปรากฏขึ้น */
+        }
+
+        .loading-text {
+            font-size: 3em; /* ขนาดข้อความใหญ่ขึ้น */
+            font-weight: 700; /* ตัวหนา */
+            color: ##9bff9f; /* สีทองดูโดดเด่น */
+        }
+
+        .spinner {
+            border: 8px solid rgba(255, 255, 255, 0.3);
+            border-top: 8px solid #4CAF50; /* สีเขียวเหมือนปุ่มแรก */
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1.5s linear infinite; /* แอนิเมชันหมุน */
+            margin: 0 auto; /* จัดกลาง */
+        }
+
+        /* Keyframe Animations */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-container">
+        <div class="loading-text">กำลังดำเนินการ...</div>
+        <div class="spinner"></div>
+    </div>
+</body>
+</html>
